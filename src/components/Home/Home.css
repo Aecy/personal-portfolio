@@ -82,6 +82,18 @@
     margin-bottom: var(--mb-3);
 }
 
+.home__description a {
+    color: var(--title-color);
+    padding: 0.1rem 0.3rem;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.home__description a:hover {
+    background-color: rgba(255, 255, 255, .8);
+}
+
 .home__img {
     background: url(../../assets/me.jpg) no-repeat center;
     background-size: cover;

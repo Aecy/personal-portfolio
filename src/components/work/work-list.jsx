@@ -1,39 +1,43 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from "react";
+import {motion} from "framer-motion";
 
-import { ProjectsData, ProjectsNav } from '../../data/WorkData.jsx'
 import WorkItem from './work-item.jsx';
+import {worksNav, worksData} from "../../lib/data.jsx";
 
-const WorkList = () => {
-  const [item, setItem] = useState({ name: 'all' })
-  const [projects, setProjects] = useState([])
-  const [active, setActive] = useState(0)
+export default function WorkList () {
+  const [item, setItem] = useState({ name: 'all' });
+  const [projects, setProjects] = useState([]);
+  const [active, setActive] = useState(0);
 
-  const handleClick = (e, index) => {
-    setItem({name: e.target.textContent.toLowerCase()})
-    setActive(index)
+  function handleClick (e, index) {
+    setItem({name: e.target.textContent.toLowerCase()});
+    setActive(index);
   }
 
   useEffect(() => {
     if (item.name === 'all') {
-      setProjects(ProjectsData)
+      setProjects(worksData)
     } else {
-      const projects = ProjectsData.filter((projects) => projects.category.toLowerCase() === item.name)
+      const projects = worksData.filter((projects) => projects.category.toLowerCase() === item.name)
       setProjects(projects)
     }
-  }, [item])
+  }, [item]);
 
   return (
     <React.Fragment>
       <div className="work__filters">
-        {ProjectsNav.map((item, index) => {
+        {worksNav.map((item, index) => {
           return (
-            <span
+            <motion.span
+              initial={{opacity: 0, scale: 0}}
+              whileInView={{opacity: 1, scale: 1}}
+              viewport={{once: true}}
               className={`${active === index ? 'active-work' : ''} work__item`}
               key={index}
               onClick={(e) => handleClick(e, index)}
             >
             {item.name}
-          </span>
+          </motion.span>
           )
         })}
       </div>
@@ -41,12 +45,10 @@ const WorkList = () => {
       <div className="work__container container grid">
         {projects.map((item) => {
           return (
-            <WorkItem item={item} key={item.id} />
+            <WorkItem item={item} index={item.id} key={item.id} />
           )
         })}
       </div>
     </React.Fragment>
   )
 }
-
-export default WorkList

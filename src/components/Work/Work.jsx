@@ -9,8 +9,8 @@ const Work = () => {
     <section className="work section" id="portfolio">
 
       <Section title="Mon portfolio" />
-
       <WorkList />
+
     </section>
   )
 }

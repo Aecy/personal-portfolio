@@ -1,8 +1,9 @@
 import React from 'react'
 
-import './ScrollToTop.css'
+import './scrollToTop.css'
+import {UilArrowUp} from "@iconscout/react-unicons";
 
-const ScrollToTop = () => {
+export default function ScrollToTop () {
 
   window.addEventListener('scroll', (event) => {
     const scrollUp = document.querySelector('.scrollup')
@@ -12,9 +13,7 @@ const ScrollToTop = () => {
 
   return (
     <a href="#" className="scrollup">
-      <i className="uil uil-arrow-up scrollup__icon"></i>
+      <UilArrowUp className="scrollup__icon" />
     </a>
   )
 }
-
-export default ScrollToTop

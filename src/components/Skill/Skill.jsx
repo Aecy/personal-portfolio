@@ -3,8 +3,7 @@ import {motion} from "framer-motion"
 
 import "./Skill.css"
 import {SkillData} from "../../data/SkillData.jsx"
-import SectionTitle from "../../helpers/SectionTitle"
-import SectionSubtitle from "../../helpers/SectionSubtitle"
+import Section from "../../helpers/section.jsx";
 
 const Skill = () => {
 
@@ -25,8 +24,7 @@ const Skill = () => {
   return (
     <section className="skill section" id="skills">
 
-      <SectionTitle name="Expérience" />
-      <SectionSubtitle name="Mon niveau technique" />
+      <Section title="Expérience" subtitle="Mon niveau technique" />
 
       <ul className="skill__container container grid">
         {SkillData.map(({id, name}) => {

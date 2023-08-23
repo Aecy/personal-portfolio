@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './header.css'
 
+import {motion} from "framer-motion";
 import {links} from "../../lib/data.jsx";
 import {UilApps, UilTimes} from "@iconscout/react-unicons";
 
@@ -17,26 +18,30 @@ export default function Header () {
 
   return (
     <header className="header">
-      <nav className="nav container">
+      <motion.nav
+        initial={{y: -100, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        className="nav container"
+      >
         <a href="index.html" className="nav__logo">
           Mavrick Thiry
         </a>
 
         <div className={menu ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className="nav__list grid">
-            {links.map((item, index) => {
+            {links.map(({name, hash, icon}) => {
               return (
                 <li
-                  key={index}
+                  key={hash}
                   className="nav__item"
                 >
                   <a
-                    href={item.hash}
-                    onClick={() => setActiveNav(item.hash)}
-                    className={activeNav === item.hash ? 'nav__link active-link' : 'nav__link'}
+                    href={hash}
+                    onClick={() => setActiveNav(hash)}
+                    className={activeNav === hash ? 'nav__link active-link' : 'nav__link'}
                   >
-                    {item.icon}
-                    {item.name}
+                    {icon}
+                    {name}
                   </a>
                 </li>
               )
@@ -49,7 +54,7 @@ export default function Header () {
         <div className="nav__toggle" onClick={() => showMenu(!menu)}>
           <UilApps />
         </div>
-      </nav>
+      </motion.nav>
     </header>
   )
 }

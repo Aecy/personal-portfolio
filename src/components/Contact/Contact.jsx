@@ -1,49 +1,48 @@
 import React, {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 
-import './Contact.css'
+import './contact.css'
+import Section from "../../helpers/section";
+import {UilArrowRight, UilMailboxAlt, UilWhatsapp, UilWhatsappAlt} from "@iconscout/react-unicons";
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
 
   const sendMail = (event) => {
     event.preventDefault();
 
-    emailjs.sendForm(
-      'service_tolny9f',
-      'template_4t63jh9',
-      form.current,
-      'RwZzgOXbXoXG3pioA'
-    )
+    emailjs.sendForm('service_tolny9f', 'template_4t63jh9', form.current, 'RwZzgOXbXoXG3pioA')
 
     event.target.reset()
   }
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title">Contact</h2>
-      <span className="section__subtitle">Pour prendre un devis ou discuter</span>
+
+      <Section title="Me contacter" />
 
       <div className="contact__container container grid">
         <div className="contact__content">
           <h3 className="contact__title">Contactez moi via</h3>
           <div className="contact__info">
             <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
+              <UilMailboxAlt className="contact__card-icon" />
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">mthiry14@hotmail.fr</span>
 
               <a href="mailto:mthiry14@hotmail.fr" className="contact__button">
-                Écrivez-moi <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                Écrivez-moi
+                <UilArrowRight className="contact__button-icon" />
               </a>
             </div>
             <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
+              <UilWhatsapp className="contact__card-icon" />
               <h3 className="contact__card-title">WhatsApp</h3>
               <span className="contact__card-data">+33749673614</span>
 
-              <a href="https://api.whatsapp.com/send/?phone=33749673614&text=Bonjour,%20Mavrick" className="contact__button">
-                Écrivez-moi <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+              <a href="https://api.whatsapp.com/send/?phone=33749673614&text=Bonjour,%20je%20vous%20contact%20pour%20..." target="_blank" className="contact__button">
+                Écrivez-moi
+                <UilArrowRight className="contact__button-icon" />
               </a>
             </div>
           </div>

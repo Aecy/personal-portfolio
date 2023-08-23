@@ -27,12 +27,32 @@
 }
 
 .nav__link {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
     color: var(--title-color);
-    transition: 300ms;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 50px;
+    background-color: var(--title-color);
+    bottom: -0.5rem;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .nav__icon,

@@ -1,18 +1,19 @@
 import React from 'react'
 
-import './Testimonial.css'
+import './testimonial.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination} from "swiper/modules"
 import { TestimonialData } from "../../data/TestimonialData.jsx";
+import Section from "../../helpers/section";
 
-const Testimonial = () => {
+export default function Testimonial () {
   return (
     <section className="testimonial container section">
-      <h2 className="section__title">Clients</h2>
-      <span className="section__subtitle">Ce qu'ils disent</span>
+
+      <Section title="Mes clients" />
 
       <Swiper
         className="testimonial__container"
@@ -45,5 +46,3 @@ const Testimonial = () => {
     </section>
   )
 }
-
-export default Testimonial

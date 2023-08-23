@@ -13,7 +13,7 @@ import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import ScrollToTop from './components/scrollToTop/scrollToTop.jsx'
 
-const App = () => {
+export default function App () {
   return (
     <>
       <Header />
@@ -34,5 +34,3 @@ const App = () => {
     </>
   )
 }
-
-export default App

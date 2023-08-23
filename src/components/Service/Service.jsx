@@ -4,7 +4,7 @@ import './service.css'
 import Section from "../../helpers/section";
 import {UilArrow, UilArrowRight, UilEdit, UilTimes, UilWebGrid, UilWebGridAlt} from "@iconscout/react-unicons";
 
-const Service = () => {
+export default function Service () {
   const [modalState, setModalState] = useState(0);
 
   const modalTab = (index) => {
@@ -143,5 +143,3 @@ const Service = () => {
     </section>
   )
 }
-
-export default Service

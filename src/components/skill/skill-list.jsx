@@ -8,7 +8,7 @@ export default function SkillList () {
     <ul className="skill__container container grid">
       {skills.map(({id, name}) => {
         return (
-          <SkillItem name={name} id={id} />
+          <SkillItem name={name} id={id} key={id} />
         )
       })}
     </ul>

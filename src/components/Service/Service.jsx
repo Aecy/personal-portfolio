@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import './service.css'
 import Section from "../../helpers/section";
+import {UilArrow, UilArrowRight, UilEdit, UilTimes, UilWebGrid, UilWebGridAlt} from "@iconscout/react-unicons";
 
 const Service = () => {
   const [modalState, setModalState] = useState(0);
@@ -18,7 +19,7 @@ const Service = () => {
       <div className="services__container container grid">
         <div className="service__content">
           <div>
-            <i className="uil uil-web-grid service__icon"></i>
+            <UilWebGrid className="service__icon" />
             <h3 className="service__title">
               Site <br/>
               Internet
@@ -27,12 +28,12 @@ const Service = () => {
 
           <span className="service__button" onClick={() => modalTab(1)}>
             Voir plus
-            <i className="uil uil-arrow-right service__button-icon"></i>
+            <UilArrowRight className="service__button-icon" />
           </span>
 
           <div className={modalState === 1 ? 'service__modal active-modal' : 'service__modal'}>
             <div className="service__modal-content">
-              <i className="uil uil-times service__modal-close" onClick={() => modalTab(0)}></i>
+              <UilTimes className="service__modal-close" onClick={() => modalTab(0)} />
               <h3 className="service__modal-title">Site internet</h3>
               <p className="service__modal-description">
                 Création de site internet sur mesure.
@@ -61,7 +62,7 @@ const Service = () => {
 
         <div className="service__content">
           <div>
-            <i className="uil uil-arrow service__icon"></i>
+            <UilArrow className="service__icon" />
             <h3 className="service__title">
               Script <br/>
               de serveurs
@@ -70,12 +71,12 @@ const Service = () => {
 
           <span className="service__button" onClick={() => modalTab(2)}>
             Voir plus
-            <i className="uil uil-arrow-right service__button-icon"></i>
+            <UilArrowRight className="service__button-icon" />
           </span>
 
           <div className={modalState === 2 ? 'service__modal active-modal' : 'service__modal'}>
             <div className="service__modal-content">
-              <i className="uil uil-times service__modal-close" onClick={() => modalTab(0)}></i>
+              <UilTimes className="service__modal-close" onClick={() => modalTab(0)} />
               <h3 className="service__modal-title">Script de serveurs de jeux-vidéos</h3>
               <p className="service__modal-description">
                 Création de script pour des serveurs de jeux-vidéos sur mesure.
@@ -104,19 +105,19 @@ const Service = () => {
 
         <div className="service__content">
           <div>
-            <i className="uil uil-edit service__icon"></i>
+            <UilEdit className="service__icon" />
             <h3 className="service__title">
-              Visual <br/>
-              Designer
+              Designer <br/>
+              Visuel
             </h3>
           </div>
           <span className="service__button">
             Voir plus
-            <i className="uil uil-arrow-right service__button-icon"></i>
+            <UilArrowRight className="service__button-icon" />
           </span>
           <div className="service__modal">
             <div className="service__modal-content">
-              <i className="uil uil-times service__modal-close"></i>
+              <UilTimes className="service__modal-close" onClick={() => modalTab(0)} />
               <h3 className="service__modal-title"></h3>
               <p className="service__modal-description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, vitae?

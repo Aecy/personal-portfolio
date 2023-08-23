@@ -237,7 +237,7 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 378px) {
     .home__img {
         width: 180px;
         height: 180px;
@@ -248,9 +248,11 @@
     }
 
     .home__bg1 {
-        left: 1rem;
+        display: none;
     }
+
     .home__bg2 {
         right: 1rem;
+        width: 50rem;
     }
 }

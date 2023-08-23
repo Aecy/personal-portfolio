@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-import './Service.css'
+import './service.css'
+import Section from "../../helpers/section";
 
 const Service = () => {
   const [modalState, setModalState] = useState(0);
@@ -11,8 +12,8 @@ const Service = () => {
 
   return (
     <section className="service section" id="services">
-      <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">Ce que j'offre</span>
+
+      <Section title="Mes services" />
 
       <div className="services__container container grid">
         <div className="service__content">

@@ -6,9 +6,9 @@ import SkillItem from "./skill-item";
 export default function SkillList () {
   return (
     <ul className="skill__container container grid">
-      {skills.map(({id, name}) => {
+      {skills.map((item, index) => {
         return (
-          <SkillItem name={name} id={id} key={id} />
+          <SkillItem name={item.name} id={index} key={index} />
         )
       })}
     </ul>

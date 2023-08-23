@@ -1,13 +1,14 @@
 import React from 'react'
 
-import './Work.css'
-import WorkList from './WorkList.jsx'
+import './work.css'
+import WorkList from './work-list.jsx'
+import Section from "../../helpers/section";
 
 const Work = () => {
   return (
     <section className="work section" id="portfolio">
-      <h2 className="section__title">Portfolio</h2>
-      <span className="section__subtitle">Mes récents travaux</span>
+
+      <Section title="Mon portfolio" />
 
       <WorkList />
     </section>

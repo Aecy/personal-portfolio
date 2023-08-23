@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './App.css'
 
 import Header from './components/header/header.jsx'
@@ -14,6 +14,16 @@ import Footer from './components/footer/footer.jsx'
 import ScrollToTop from './components/scrollToTop/scrollToTop.jsx'
 
 export default function App () {
+
+  useEffect(() => {
+    const handleContextMenu = (event) => event.preventDefault();
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+    }
+  }, []);
+
   return (
     <>
       <Header />

@@ -24,6 +24,7 @@ export default function SkillItem ({id, name}) {
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
+      whileHover={{scale: 1.05}}
       viewport={{once: true}}
       className="skill__content"
     >

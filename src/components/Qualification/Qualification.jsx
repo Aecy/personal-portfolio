@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-import './Qualification.css'
+import './qualification.css'
+import Section from "../../helpers/section";
 
 const Qualification = () => {
   const [qualificationState, setQualificationState] = useState(1);
@@ -11,8 +12,8 @@ const Qualification = () => {
 
   return (
     <section className="qualification section" id="qualifications">
-      <h2 className="section__title">Qualifications</h2>
-      <span className="section__subtitle">Mes projets personnels</span>
+
+      <Section title="Mes qualifications" />
 
       <div className="qualification__container container">
         <div className="qualification__tabs">

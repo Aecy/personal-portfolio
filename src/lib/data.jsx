@@ -46,6 +46,7 @@ export const links = [
     hash: '#contact'
   }
 ];
+
 export const socials = [
   {
     index: 1,
@@ -63,6 +64,7 @@ export const socials = [
     icon: React.createElement(UilGithubAlt)
   },
 ];
+
 export const abouts = [
   {
     index: 1,
@@ -83,105 +85,56 @@ export const abouts = [
     icon: React.createElement(UilBriefcaseAlt, {className: 'about__icon'})
   },
 ];
+
 export const skills = [
+  {name: 'HTML'},
+  {name: 'CSS'},
+  {name: 'JavaScript'},
+  {name: 'TypeScript'},
+  {name: 'React'},
+  {name: 'VueJS'},
+  {name: 'NextJS'},
+  {name: 'Node.js'},
+  {name: 'PHP'},
+  {name: 'LUA'},
+  {name: 'SQF'},
+  {name: 'Git'},
+  {name: 'TailwindCSS'},
+  {name: 'Bootstrap'},
+  {name: 'Figma'},
+  {name: 'MongoDB'},
+  {name: 'MySQL'},
+  {name: 'Express'},
+  {name: 'Framer Motion'},
+  {name: 'Laravel'},
+  {name: 'Symfony'},
+  {name: 'Ruby on Rails'},
+];
+
+export const qualifications = [
   {
-    id: 1,
-    name: 'HTML',
-    level: 'Expert'
+    title: 'Impulsion Life',
+    subtitle: 'Fondateur, développeur Web & SQF',
+    date: 'Janv. 2017 - Févr. 2019'
   },
   {
-    id: 2,
-    name: 'CSS',
-    level: 'Intermédiaire'
+    title: 'The-Programmer',
+    subtitle: 'Concepteur de produit virtuel',
+    date: 'Janv. 2018 - Présent'
   },
   {
-    id: 3,
-    name: 'JavaScript',
-    level: 'Intermédiaire'
+    title: 'ArmaServices',
+    subtitle: 'Concepteur de produit virtuel',
+    date: 'Avr. 2020 - Mai 2022'
   },
   {
-    id: 4,
-    name: 'TypeScript',
-    level: 'Intermédiaire'
+    title: 'Bytex MarketPlace',
+    subtitle: 'Concepteur de produit virtuel',
+    date: 'Avr. 2020 - Oct. 2021'
   },
   {
-    id: 5,
-    name: 'React',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 6,
-    name: 'VueJS',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 7,
-    name: 'NextJS',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 8,
-    name: 'Node.js',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 9,
-    name: 'PHP',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 10,
-    name: 'Git',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 11,
-    name: 'Tailwindcss',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 12,
-    name: 'Bootstrap',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 13,
-    name: 'Figma',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 14,
-    name: 'MongoDB',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 15,
-    name: 'MySQL',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 16,
-    name: 'Express',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 17,
-    name: 'Framer Motion',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 18,
-    name: 'Laravel',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 19,
-    name: 'Symfony',
-    level: 'Intermédiaire'
-  },
-  {
-    id: 20,
-    name: 'Ruby on Rails',
-    level: 'Intermédiaire'
+    title: 'Vision RP',
+    subtitle: 'Développeur backend LUA',
+    date: 'Févr. 2023 - Mars 2023'
   },
 ];

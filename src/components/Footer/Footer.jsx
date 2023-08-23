@@ -1,48 +1,40 @@
 import React from 'react'
 
-import './Footer.css'
+import './footer.css'
+import {links, socials} from "../../lib/data.jsx";
 
-const Footer = () => {
+export default function Footer () {
   return (
     <footer className="footer">
       <div className="footer__container container grid">
         <h1 className="footer__title">Mavrick</h1>
         
         <ul className="footer__list">
-          <li>
-            <a href="#about" className="footer__link">
-              A propos
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="footer__link">
-              Expériences
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="footer__link">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="footer__link">
-              Contact
-            </a>
-          </li>
+          {links.map(({name, icon, hash}) => {
+            return (
+              <li key={hash}>
+                <a href={hash} className="footer__link">
+                  {name}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="footer__social">
-          <a href="#" className="footer__social-link" target="_blank">
-            <i className="bx bxl-facebook"></i>
-          </a>
+          {socials.map(({index, hash, icon}) => {
+            return (
+              <a key={hash} href={hash} className="footer__social-link" target="_blank">
+                {icon}
+              </a>
+            )
+          })}
         </div>
 
         <span className="footer__copy">
-          &#169; MAV "Aecy". All rights reserved.
+          &#169; Mavrick. All rights reserved.
         </span>
       </div>
     </footer>
   )
 }
-
-export default Footer

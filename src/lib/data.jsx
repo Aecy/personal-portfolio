@@ -46,7 +46,6 @@ export const links = [
     hash: '#contact'
   }
 ];
-
 export const socials = [
   {
     index: 1,
@@ -64,28 +63,26 @@ export const socials = [
     icon: React.createElement(UilGithubAlt)
   },
 ];
-
 export const abouts = [
   {
     index: 1,
+    title: 'Mavrick',
+    subtitle: 'Développeur',
+    icon: React.createElement(UilUser, {className: 'about__icon'})
+  },
+  {
+    index: 2,
     title: 'Expérience',
     subtitle: '8 années',
     icon: React.createElement(UilAward, {className: 'about__icon'})
   },
   {
-    index: 2,
+    index: 3,
     title: 'Projets',
     subtitle: '+14 terminés',
     icon: React.createElement(UilBriefcaseAlt, {className: 'about__icon'})
   },
-  {
-    index: 3,
-    title: 'Support',
-    subtitle: 'En ligne 24/7',
-    icon: React.createElement(UilHeadphones, {className: 'about__icon'})
-  },
 ];
-
 export const skills = [
   {
     id: 1,

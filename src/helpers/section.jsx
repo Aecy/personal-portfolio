@@ -1,17 +1,28 @@
 import React from "react";
 import {motion} from "framer-motion";
 
-export default function Section ({title, subtitle}) {
+export default function Section ({title}) {
   return (
-    <motion.div
-      initial={{opacity: 0, y: 100}}
-      whileInView={{opacity: 1, y: 0}}
-      transition={{duration: 0.4, bounce: 1}}
-    >
-      <h2 className="section__title">
+    <React.Fragment>
+
+      <motion.h2
+        initial={{opacity: 0, y: 100}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 0.4, bounce: 1}}
+        className="section__title"
+      >
         {title}
-      </h2>
-      <span className="section__subtitle">{subtitle}</span>
-    </motion.div>
+      </motion.h2>
+
+      <motion.span
+        initial={{opacity: 0, scale: 0}}
+        whileInView={{opacity: 0.1, scale: 1}}
+        transition={{duration: 0.4, bounce:1}}
+        className="section__subtitle"
+      >
+        {title}
+      </motion.span>
+
+    </React.Fragment>
   )
 }

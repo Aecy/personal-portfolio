@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 import "./home.css";
 import Scroll from "./scroll.jsx";
 import {socials} from "../../lib/data.jsx";
-import {UilAward, UilMessage} from "@iconscout/react-unicons";
+import {UilMessage} from "@iconscout/react-unicons";
 
 export default function Home () {
 

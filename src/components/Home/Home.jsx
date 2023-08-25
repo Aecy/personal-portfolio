@@ -83,7 +83,7 @@ export default function Home () {
               <p className="home__description">
                 Je suis développeur full-stack avec 8 ans d'expérience.
                 J'aime créer et inover. <br/><br/>
-                Focus <u>PHP</u> (<a href="#">Laravel</a>, <a href="#">Symfony</a> & <a href="#">Slim</a>).
+                Focus <u>PHP</u> (<a target="_blank" href="https://laravel.com/">Laravel</a>, <a target="_blank" href="https://symfony.com/">Symfony</a> & <a target="_blank" href="https://www.slimframework.com/">Slim</a>).
               </p>
 
               <a href="#contact" className="button button--flex">

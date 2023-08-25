@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import {motion} from "framer-motion";
 
-import {UilArrowRight} from "@iconscout/react-unicons";
+import {UilArrow, UilArrowsH, UilCodeBranch, UilExternalLinkAlt, UilGithub, UilTimes} from "@iconscout/react-unicons";
 
 export default function WorkItem ({item, index}) {
+  const [workModal, setWorkModal] = useState(0);
 
   const fadeInAnimationVariants = {
     initial: {
@@ -20,27 +21,67 @@ export default function WorkItem ({item, index}) {
   }
 
   return (
-    <motion.div
-      variants={fadeInAnimationVariants}
-      custom={index}
-      initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true
-      }}
-      className="work__card"
-      key={index}
-    >
-      <motion.img
-        whileHover={{scale: 1.02, rotate: '-4deg'}}
-        src={item.image}
-        alt={`${item.title}'s image project`}
-        className="work__img"
-      />
-      <h3 className="work__title">{item.title}</h3>
-      <a href={item.album} className="work__button" target="_blank">
-        Voir le site <UilArrowRight size="1rem" className="work__button-icon" />
-      </a>
-    </motion.div>
+    <React.Fragment>
+      <figure className="work__content">
+        <motion.img
+          variants={fadeInAnimationVariants}
+          custom={index}
+          key={index}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true
+          }}
+          src={item.image}
+          alt={`${item.title}'s image project`}
+          className="work__img"
+        />
+        <button
+          onClick={() => setWorkModal(item.id)}
+          className="work__detail-button"
+        >
+          Voir en détail
+        </button>
+      </figure>
+
+      <div className={workModal === item.id ? 'work__modal active-modal' : 'work__modal'}>
+        <div className="work__modal-content">
+          <UilTimes className="work__modal-close" onClick={() => setWorkModal(0)} />
+          <div className="work__modal-image">
+            <img src={item.image} alt={`item ${item.title} image modal`} />
+          </div>
+          <h3 className="work__modal-title">{item.title}</h3>
+          <p className="work__modal-description">
+            {item.description}
+          </p>
+          <div className="work__modal-technologies">
+            <h4>Technologies :</h4>
+            <ul className="work__modal-technologies-list">
+              {item.technologies.map((technology, index) => {
+                return (
+                  <li className="work__modal-technologies-item" key={index}>
+                    {technology}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="work__modal-buttons">
+            {item.liveSite !== '' && (
+              <a href={item.liveSite} target="_blank" className="button button--flex button__icon work__modal-button_live">
+                Voir le site
+                <UilExternalLinkAlt size="16" />
+              </a>
+            )}
+            {item.github !== '' && (
+              <a href={item.liveSite} target="_blank" className="button button--flex button__icon work__modal-button_live">
+                Voir le code source
+                <UilCodeBranch size="16" />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   )
 }

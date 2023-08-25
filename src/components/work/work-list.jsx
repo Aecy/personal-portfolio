@@ -6,12 +6,17 @@ import {worksNav, worksData} from "../../lib/data.jsx";
 
 export default function WorkList () {
   const [item, setItem] = useState({ name: 'all' });
+  const [nextItems, setNextItems] = useState(6);
   const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
 
   function handleClick (e, index) {
     setItem({name: e.target.textContent.toLowerCase()});
     setActive(index);
+  }
+
+  function loadMoreProjects () {
+    setNextItems(prev => prev + 3);
   }
 
   useEffect(() => {
@@ -43,11 +48,22 @@ export default function WorkList () {
       </div>
 
       <div className="work__container container grid">
-        {projects.map((item) => {
+        {projects?.slice(0, nextItems).map((item) => {
           return (
             <WorkItem item={item} index={item.id} key={item.id} />
           )
         })}
+      </div>
+
+      <div className="work__loader">
+        {nextItems < projects.length && worksData.length > 6 && (
+          <button
+            onClick={loadMoreProjects}
+            className="work__loader-button"
+          >
+            Voir plus...
+          </button>
+        )}
       </div>
     </React.Fragment>
   )

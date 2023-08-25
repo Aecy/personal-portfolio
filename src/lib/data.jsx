@@ -2,22 +2,31 @@ import React from "react";
 import {
   UilAward,
   UilBriefcaseAlt,
+  UilEnvelopeStar,
   UilEstate,
   UilFileAlt,
   UilGithubAlt,
-  UilHeadphones,
   UilImage,
   UilInstagram,
   UilMessage,
   UilTwitterAlt,
   UilUser
 } from "@iconscout/react-unicons";
+
 import Work1 from '../assets/work1.jpg'
 import Work2 from '../assets/work2.jpg'
 import Work3 from '../assets/work3.jpg'
 import Work4 from '../assets/work4.jpg'
 import Work5 from '../assets/work5.jpg'
 import Work6 from '../assets/work6.jpg'
+import Work7 from '../assets/work7.jpg'
+
+import Image1 from '../assets/testimonial1.jpg'
+import Image2 from '../assets/testimonial2.jpg'
+import Image3 from '../assets/testimonial3.jpg'
+import Image4 from '../assets/testimonial4.jpg'
+import Image5 from '../assets/testimonial5.jpg'
+import Image6 from '../assets/testimonial6.jpg'
 
 export const links = [
   {
@@ -36,9 +45,9 @@ export const links = [
     hash: '#skills'
   },
   {
-    name: 'Services',
-    icon: React.createElement(UilBriefcaseAlt, {className: 'nav__icon'}),
-    hash: '#services'
+    name: 'Avis clients',
+    icon: React.createElement(UilEnvelopeStar, {className: 'nav__icon'}),
+    hash: '#testimonials'
   },
   {
     name: 'Portfolio',
@@ -155,42 +164,102 @@ export const worksData = [
     id: 1,
     image: Work1,
     title: 'Altis France',
-    album: 'https://imgur.com/a/vIwKCrP',
+    description: "Altis France représente un serveur de jeu de rôle basé sur Arma 3, utilisant le cadre d'Altis Life développé par AsYetUntilted (Tonic). Cette plateforme a été conçue comme un back-office permettant la gestion des joueurs et de l'ensemble des données du serveur de jeu. Cette gestion peut se faire indépendamment de toute connexion, évitant ainsi les modifications manuelles délicates dans la syntaxe parfois complexe de certaines données SQL.",
+    technologies: ['PHP', 'Laravel', 'SASS', 'MySQL'],
+    liveSite: 'https://admin.altisfrance.fr', github: '',
     category: 'web'
   },
   {
     id: 2,
     image: Work2,
     title: 'lsstories',
-    album: 'https://imgur.com/a/PWYBWHz',
+    description: "lsstories était un serveur de jeu de rôle basé sur San Andreas. Ce site avait été créé dans le but de gérer les autorisations pour leur serveur. Ainsi, seuls les joueurs disposant d'un compte et de personnages étaient en mesure de participer pleinement à l'expérience de jeu.",
+    technologies: ['PHP', 'Laravel', 'VueJS', 'MySQL'],
+    liveSite: '', github: '',
     category: 'web'
   },
   {
     id: 3,
     image: Work3,
     title: 'Betterify',
-    album: 'https://imgur.com/a/xuUXr2I',
+    description: "Betterify est une version qui selon-moi pourrait arriver sur Spotify. Ce design a été réalisé sur le logiciel Figma.",
+    technologies: ['Figma'],
+    liveSite: '', github: '',
     category: 'design'
   },
   {
     id: 4,
     image: Work4,
     title: 'Altis4Life',
-    album: 'https://imgur.com/a/6DSbBkH',
+    description: "Altis4Life était un serveur de jeu axé sur Arma 3, mettant en œuvre le framework Altis Life développé par AsYetUntilted (Tonic). J'ai enrichi l'expérience en introduisant la possibilité pour les joueurs de voter toutes les 3 heures. Chaque vote leur accordait un certain nombre de points, ces derniers pouvant être échangés contre de la monnaie virtuelle en jeu. De plus, le système de récompenses était graduel : accumuler davantage de points devenait plus difficile au fur et à mesure, ce qui ajoutait une dimension stratégique à l'obtention des récompenses.",
+    technologies: ['PHP', 'Bootstrap', 'MySQL'],
+    liveSite: '', github: '',
     category: 'web'
   },
   {
     id: 5,
     image: Work5,
     title: 'Les chichis de Lilie',
-    album: 'https://imgur.com/a/MEUUqqg',
+    description: "Ce site n'a pas encore été déployé, mais sa mise en ligne est imminente. J'ai conçu ce site entièrement à partir de zéro, en tenant compte des préférences de ma conjointe. L'objectif est de lui permettre de démarrer une activité qui lui plaît en dehors de son travail.",
+    technologies: ['PHP', 'CSS', 'Bootstrap'],
+    liveSite: '', github: '',
     category: 'web'
   },
   {
     id: 6,
     image: Work6,
     title: 'teamready',
-    album: 'https://imgur.com/a/9vkx0s9',
+    description: "teamready constituait une plateforme dédiée à rassembler et unir des équipes évoluant dans une variété de jeux. Son objectif était de faciliter l'organisation de tournois, la formation de groupes de joueurs et même de mettre en place des lobbies interactifs en temps réel. Ces lobbies offraient aux joueurs un espace pour interagir, discuter et bien plus encore. Malheureusement, malgré ses promesses, ce projet n'a pas été concrétisé et le site n'a pas été lancé.",
+    technologies: ['PHP', 'Laravel', 'VueJS', 'MySQL'],
+    liveSite: '', github: 'https://github.com/Aecy/teamready.net',
     category: 'web'
   },
+  {
+    id: 7,
+    image: Work7,
+    title: 'NeoVice',
+    description: "NeoVice: L'Ère Électronique vous invite à plonger dans un univers cyberpunk futuriste, où la mégalopole de NéoVice brille de néons et regorge de mystères. Dans ce décor dystopique, vous prendrez des décisions cruciales, naviguerez entre les intrigues des mégacorporations et des factions, et personnaliserez votre personnage avec des modifications cybernétiques uniques. L'économie de la ville est dynamique, influençant vos choix et votre statut social. Que vous souhaitiez devenir un rebelle qui lutte pour la liberté ou un magnat des affaires assoiffé de pouvoir, NeoVice offre une expérience immersive et riche en possibilités.",
+    technologies: ['Figma'],
+    liveSite: '', github: '',
+    category: 'design'
+  }
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    image: Image1,
+    title: 'Nexus',
+    description: "Aecy est un excellent développeur il sait être à l'écoute du client. Il cherche sans cesse la solution la plus optimale pour assurer la performance et fiabilité de sa solution. Prendre Aecy comme développeur vous assure le meilleur rapport qualité prix."
+  },
+  {
+    id: 2,
+    image: Image2,
+    title: 'Florian',
+    description: "Patient et à l'écoute du client. Il offre l'exactitude de ce qui est recherché pour le bon grand plaisir de ses clients. Je recommande fortement !"
+  },
+  {
+    id: 3,
+    image: Image3,
+    title: 'Soma',
+    description: "Offre de belle possibilité d'UX/UI à mes utilisateurs. Un code très propre suivi de CI et de tests fonctionnels et unitaires à gogo. N'hésitez surtout pas."
+  },
+  {
+    id: 4,
+    image: Image4,
+    title: 'Willyarte',
+    description: "Bon travail, très patient, très communicatif et vous pouvez voir qu'il sait très bien ce qu'il fait. Le résultat obtenu par Aecy était parfaitement ce que je voulais."
+  },
+  {
+    id: 5,
+    image: Image5,
+    title: 'AltisFrance',
+    description: "Je suis entièrement satisfait du travail de Aecy. Je tiens à exprimer ma gratitude pour son professionnalisme et son dévouement tout au long du processus de développement. Son expertise et son attention aux détails ont dépassé mes attentes et ont abouti à un résultat final exceptionnel."
+  },
+  {
+    id: 6,
+    image: Image6,
+    title: 'Morko',
+    description: "Aecy est quelqu'un de très attentif sur ce qu'on lui demande et sur son propre travail. Il aime quand le travail est bien fait. J'ai été plus que satisfait de son travail. Il est très à l'écoute."
+  }
+]

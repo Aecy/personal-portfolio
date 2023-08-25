@@ -6,12 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination} from "swiper/modules"
-import { TestimonialData } from "../../data/TestimonialData.jsx";
 import Section from "../../helpers/section";
+import {testimonials} from "../../lib/data.jsx";
 
 export default function Testimonial () {
   return (
-    <section className="testimonial container section">
+    <section className="testimonial container section" id="testimonials">
 
       <Section title="Mes clients" />
 
@@ -33,7 +33,7 @@ export default function Testimonial () {
         }}
         modules={[Pagination]}
       >
-        {TestimonialData.map(({id, image, title, description}) => {
+        {testimonials.map(({id, image, title, description}) => {
           return (
             <SwiperSlide className="testimonial__card" key={id}>
               <img src={image} alt="" className="testimonial__img"/>

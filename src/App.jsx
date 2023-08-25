@@ -5,7 +5,6 @@ import Header from './components/header/header.jsx'
 import Home from './components/home/home.jsx'
 import About from './components/about/about.jsx'
 import Skill from './components/skill/skill.jsx'
-import Service from './components/service/service.jsx'
 import Qualification from './components/qualification/qualification.jsx'
 import Work from './components/work/work.jsx'
 import Testimonial from './components/testimonial/testimonial.jsx'
@@ -32,7 +31,6 @@ export default function App () {
         <Home />
         <About />
         <Skill />
-        <Service />
         <Qualification />
         <Work />
         <Testimonial />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './header.css'
 
 import {motion} from "framer-motion";
@@ -6,18 +6,29 @@ import {links} from "../../lib/data.jsx";
 import {UilApps, UilTimes} from "@iconscout/react-unicons";
 
 export default function Header () {
+  const headerRef = useRef(null);
 
-  window.addEventListener('scroll', (event) => {
-    const header = document.querySelector('.header')
-    if (window.scrollY >= 80) header.classList.add('scroll-header');
-    else header.classList.remove('scroll-header');
-  })
+  useEffect(() => {
+    function stickyHeaderHandler () {
+        if (window.scrollY >= 80) {
+          headerRef.current.classList.add('scroll-header');
+        } else {
+          headerRef.current.classList.remove('scroll-header');
+        }
+    }
+
+    window.addEventListener('scroll', stickyHeaderHandler);
+
+    return () => {
+      window.removeEventListener('scroll', stickyHeaderHandler);
+    }
+  }, []);
 
   const [menu, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState('#home');
 
   return (
-    <header className="header">
+    <header ref={headerRef} className="header">
       <motion.nav
         initial={{y: -100, opacity: 0}}
         animate={{y: 0, opacity: 1}}

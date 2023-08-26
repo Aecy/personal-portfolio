@@ -27,8 +27,8 @@ export default function Testimonial () {
             slidesPerView: 2
           },
           768: {
-            slidesPerView: 2,
-            spaceBetween: 48
+            slidesPerView: 3,
+            spaceBetween: 12
           }
         }}
         modules={[Pagination]}

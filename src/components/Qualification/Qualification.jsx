@@ -9,7 +9,7 @@ export default function Qualification () {
   return (
     <section className="qualification section" id="qualifications">
 
-      <Section title="Mes qualifications" />
+      <Section title="Mon expérience" />
       <QualificationList />
 
     </section>

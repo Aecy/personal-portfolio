@@ -1,6 +1,7 @@
 import React from "react";
 import {
-  UilAward,
+  UilAnalytics,
+  UilAward, UilBagAlt,
   UilBriefcaseAlt,
   UilEnvelopeStar,
   UilEstate,
@@ -40,12 +41,17 @@ export const links = [
     hash: '#about'
   },
   {
-    name: 'Expériences',
-    icon: React.createElement(UilFileAlt, {className: 'nav__icon'}),
+    name: 'Compétences',
+    icon: React.createElement(UilBagAlt, {className: 'nav__icon'}),
     hash: '#skills'
   },
   {
-    name: 'Avis clients',
+    name: 'Expériences',
+    icon: React.createElement(UilAnalytics, {className: 'nav__icon'}),
+    hash: '#qualifications'
+  },
+  {
+    name: 'Clients',
     icon: React.createElement(UilEnvelopeStar, {className: 'nav__icon'}),
     hash: '#testimonials'
   },
@@ -230,13 +236,13 @@ export const testimonials = [
     id: 1,
     image: Image1,
     title: 'Nexus',
-    description: "Aecy est un excellent développeur il sait être à l'écoute du client. Il cherche sans cesse la solution la plus optimale pour assurer la performance et fiabilité de sa solution. Prendre Aecy comme développeur vous assure le meilleur rapport qualité prix."
+    description: "Mavrick est un excellent développeur il sait être à l'écoute du client. Il cherche sans cesse la solution la plus optimale pour assurer la performance et fiabilité de sa solution. Le prendre comme développeur vous assure le meilleur rapport qualité prix."
   },
   {
     id: 2,
     image: Image2,
     title: 'Florian',
-    description: "Patient et à l'écoute du client. Il offre l'exactitude de ce qui est recherché pour le bon grand plaisir de ses clients. Je recommande fortement !"
+    description: "Il a été patient et à l'écoute. Il offre l'exactitude de ce qui était recherché par moi et mon équipe. Je recommande fortement !"
   },
   {
     id: 3,
@@ -248,18 +254,18 @@ export const testimonials = [
     id: 4,
     image: Image4,
     title: 'Willyarte',
-    description: "Bon travail, très patient, très communicatif et vous pouvez voir qu'il sait très bien ce qu'il fait. Le résultat obtenu par Aecy était parfaitement ce que je voulais."
+    description: "Bon travail, très patient, très communicatif et vous pouvez voir qu'il sait très bien ce qu'il fait. Le résultat obtenu par Mavrick était parfaitement ce que je voulais."
   },
   {
     id: 5,
     image: Image5,
     title: 'AltisFrance',
-    description: "Je suis entièrement satisfait du travail de Aecy. Je tiens à exprimer ma gratitude pour son professionnalisme et son dévouement tout au long du processus de développement. Son expertise et son attention aux détails ont dépassé mes attentes et ont abouti à un résultat final exceptionnel."
+    description: "Je suis entièrement satisfait du travail de Mavrick. Je tiens à exprimer ma gratitude pour son professionnalisme et son dévouement tout au long du processus de développement. Son expertise et son attention aux détails ont dépassé mes attentes et ont abouti à un résultat final exceptionnel."
   },
   {
     id: 6,
     image: Image6,
     title: 'Morko',
-    description: "Aecy est quelqu'un de très attentif sur ce qu'on lui demande et sur son propre travail. Il aime quand le travail est bien fait. J'ai été plus que satisfait de son travail. Il est très à l'écoute."
+    description: "Mavrick est quelqu'un de très attentif sur ce qu'on lui demande et sur son propre travail. Il aime quand le travail est bien fait. J'ai été plus que satisfait de son travail. Il est très à l'écoute."
   }
 ]

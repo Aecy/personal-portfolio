@@ -35,7 +35,7 @@ export default function Header () {
         className="nav container"
       >
         <a href="index.html" className="nav__logo">
-          Mavrick Thiry
+          Mavrick
         </a>
 
         <div className={menu ? 'nav__menu show-menu' : 'nav__menu'}>

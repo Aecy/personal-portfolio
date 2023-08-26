@@ -144,7 +144,10 @@ img {
   background-color: rgba(0, 255, 0, 0.2);
   color: var(--title-color);
   margin-bottom: 2rem;
-  transition: all;
+}
+
+.alert-danger {
+  color: var(--title-color);
 }
 
 /* layouts */

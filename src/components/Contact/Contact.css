@@ -89,10 +89,40 @@
     z-index: 1;
 }
 
+.contact__form-control.error {
+    border: 2px solid rgba(255, 0, 0, 0.8);
+}
+
+.contact__form-label.error {
+    color: rgba(255, 0, 0, 0.8);
+}
+
 .contact__form-label {
     position: absolute;
     top: -0.75rem;
     left: 1.25rem;
+    font-size: var(--smaller-font-size);
+    padding: 0.25rem;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+
+.contact__form-error {
+    position: absolute;
+    top: 3rem;
+    left: 1.25rem;
+    color: rgba(255, 0, 0, 0.8);
+    font-size: var(--smaller-font-size);
+    padding: 0.25rem;
+    background-color: var(--body-color);
+    z-index: 10;
+}
+
+.contact__form-error-big {
+    position: absolute;
+    top: 10.15rem;
+    left: 1.25rem;
+    color: rgba(255, 0, 0, 0.8);
     font-size: var(--smaller-font-size);
     padding: 0.25rem;
     background-color: var(--body-color);

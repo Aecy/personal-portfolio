@@ -137,6 +137,16 @@ img {
 
 .ms-2 {margin-right: 0.2rem;}
 
+.alert {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 255, 0, 0.2);
+  color: var(--title-color);
+  margin-bottom: 2rem;
+  transition: all;
+}
+
 /* layouts */
 
 .container {

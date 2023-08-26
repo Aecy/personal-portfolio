@@ -9,7 +9,7 @@ export default function Skill () {
   return (
     <section className="skill section" id="skills">
 
-      <Section title="Mon expérience" />
+      <Section title="Mes compétences" />
       <SkillList />
 
     </section>

@@ -1,7 +1,11 @@
 import React, {useState} from "react";
 import {motion} from "framer-motion";
 
-import {UilArrow, UilArrowsH, UilCodeBranch, UilExternalLinkAlt, UilGithub, UilTimes} from "@iconscout/react-unicons";
+import {
+  UilCodeBranch,
+  UilExternalLinkAlt,
+  UilTimes
+} from "@iconscout/react-unicons";
 
 export default function WorkItem ({item, index}) {
   const [workModal, setWorkModal] = useState(0);

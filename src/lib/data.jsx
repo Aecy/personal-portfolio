@@ -5,7 +5,6 @@ import {
   UilBriefcaseAlt,
   UilEnvelopeStar,
   UilEstate,
-  UilFileAlt,
   UilGithubAlt,
   UilImage,
   UilInstagram,
@@ -21,6 +20,7 @@ import Work4 from '../assets/work4.jpg'
 import Work5 from '../assets/work5.jpg'
 import Work6 from '../assets/work6.jpg'
 import Work7 from '../assets/work7.jpg'
+import Work8 from '../assets/work8.jpg'
 
 import Image1 from '../assets/testimonial1.jpg'
 import Image2 from '../assets/testimonial2.jpg'
@@ -28,6 +28,7 @@ import Image3 from '../assets/testimonial3.jpg'
 import Image4 from '../assets/testimonial4.jpg'
 import Image5 from '../assets/testimonial5.jpg'
 import Image6 from '../assets/testimonial6.jpg'
+import Image7 from '../assets/testimonial7.jpg'
 
 export const links = [
   {
@@ -228,6 +229,15 @@ export const worksData = [
     technologies: ['Figma'],
     liveSite: '', github: '',
     category: 'design'
+  },
+  {
+    id: 8,
+    image: Work8,
+    title: 'Solaris Guide',
+    description: "Solaris est un serveur privé sur Dofus à titre non-lucratif. J'ai développé ce site internet pour eux afin que leurs joueurs aient plus facile sur leur serveur de jeu. Ce site internet remplace leur guide qui était fait sur Discord.",
+    technologies: ['NextJs', 'TailwindCSS', 'API'],
+    liveSite: 'https://solarisguide.net/', github: '',
+    category: 'web'
   }
 ];
 
@@ -267,5 +277,11 @@ export const testimonials = [
     image: Image6,
     title: 'Morko',
     description: "Mavrick est quelqu'un de très attentif sur ce qu'on lui demande et sur son propre travail. Il aime quand le travail est bien fait. J'ai été plus que satisfait de son travail. Il est très à l'écoute."
-  }
+  },
+  {
+    id: 7,
+    image: Image7,
+    title: 'Ryzen',
+    description: "Très satisfait du travail fournis par Mavrick, c'est un talentueux par éxpérience, vraiment du beau design et code propre, continues."
+  },
 ]

@@ -48,7 +48,7 @@ export default function WorkList () {
       </div>
 
       <div className="work__container container grid">
-        {projects?.slice(0, nextItems).map((item) => {
+        {projects.sort((a, b) => b.id - a.id)?.slice(0, nextItems).map((item) => {
           return (
             <WorkItem item={item} index={item.id} key={item.id} />
           )
